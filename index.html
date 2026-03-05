@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bayon&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<link rel="stylesheet" href="src/style.css">
+
+<body>
+
+    <div class="container">
+        <h1>Students Information</h1>
+        <div class="action-button">
+            <button id="addBtn"><i class="fa-solid fa-plus"></i> Add New</button>
+            <button id="editBtn"><i class="fa-solid fa-pen"></i> Edit</button>
+            <button id="deleteBtn"><i class="fa-solid fa-xmark"></i> Delete</button>
+        </div>
+        <form action="data" style="width: 100%; margin-top: 10px;">
+            <table class="students-table">
+                <thead>
+                    <tr>
+                        <th><input id="selector" type="checkbox"></th>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Sex</th>
+                        <th>Phone Number</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add student rows here -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div class="input">
+        <div class="header">
+            <h2>Add New</h2>
+            <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="field">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="nameInput">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Sex</label>
+                <select name="gender" id="genderInput">
+                    <option value="N/A">N/A</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Hidden">Hidden</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="date" id="dobInput">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="emailInput">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="number" id="numberInput">
+            </div>
+        </div>
+        <div class="footer">
+            <button id="createBtn"><i class="fa-solid fa-check"></i> Create</button>
+            <button id="closeBtn"><i class="fa-solid fa-xmark"></i> Close</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="src/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
